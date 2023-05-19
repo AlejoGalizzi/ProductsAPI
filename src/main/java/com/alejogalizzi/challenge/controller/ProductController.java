@@ -21,7 +21,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProducts());
     }
 
-    @GetMapping
+    @GetMapping(params = "orderByPrice")
     private ResponseEntity<List<Product>> getProducts(@RequestParam(name = "orderByPrice") boolean order) {
         if(order){
             return ResponseEntity.ok(productService.getProductsOrderByPrice());
@@ -34,7 +34,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    @GetMapping
+    @GetMapping(params = "name")
     private ResponseEntity<Product> getProductByName(@RequestParam String name) {
         return ResponseEntity.ok(productService.getProductByName(name));
     }

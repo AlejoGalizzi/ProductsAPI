@@ -4,9 +4,11 @@ import com.alejogalizzi.challenge.model.Product;
 import com.alejogalizzi.challenge.repository.ProductRepository;
 import com.alejogalizzi.challenge.service.abstraction.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductServiceImp implements ProductService {
 
     @Autowired

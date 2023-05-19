@@ -10,6 +10,8 @@ public interface ProductService {
 
     List<Product> getProducts();
 
+    List<Product> getProductsOrderByPrice();
+
     Product getProductById(long id);
 
     Product getProductByName(String name);

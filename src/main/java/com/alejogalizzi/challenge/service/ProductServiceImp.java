@@ -18,6 +18,11 @@ public class ProductServiceImp implements ProductService {
     }
 
     @Override
+    public List<Product> getProductsOrderByPrice() {
+        return productRepository.findAllByOrderByPrice();
+    }
+
+    @Override
     public Product getProductById(long id) {
         try {
             return productRepository.findById(id).orElseThrow(ClassNotFoundException::new);
